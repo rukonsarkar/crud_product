@@ -13,16 +13,16 @@ class ProductItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: Image.network(
-        product.image ?? '',
+        product.image ?? 'https://th.bing.com/th/id/OIP.vDk8ci5k0hlsbP2p_jLHkAHaE8?w=262&h=180&c=7&r=0&o=5&pid=1.7', width: 60,
       ),
-      title: Text(product.productName ?? ''),
+      title: Text(product.productName ?? '', style: TextStyle(fontWeight: FontWeight.bold),),
       subtitle: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Product Code : ${product.productCode}' ?? ''),
-          Text('Product Quantity : ${product.quantity}' ?? ''),
-          Text('product Price : ${product.unitPrice}' ?? ''),
-          Text('Total Price : ${product.totalPrice}' ?? ''),
+          Text('Code : ${product.productCode}' ?? ''),
+          Text('Quantity : ${product.quantity}' ?? ''),
+          Text('Price : ${product.unitPrice}' ?? ''),
+          Text('Total : ${product.totalPrice}' ?? ''),
         ],
       ),
       trailing: Wrap(
