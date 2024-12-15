@@ -19,10 +19,10 @@ class ProductItem extends StatelessWidget {
       subtitle: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(product.productCode ?? ''),
-          Text(product.quantity ?? ''),
-          Text(product.unitPrice ?? ''),
-          Text(product.totalPrice ?? ''),
+          Text('Product Code : ${product.productCode}' ?? ''),
+          Text('Product Quantity : ${product.quantity}' ?? ''),
+          Text('product Price : ${product.unitPrice}' ?? ''),
+          Text('Total Price : ${product.totalPrice}' ?? ''),
         ],
       ),
       trailing: Wrap(
